@@ -5,21 +5,29 @@ import com.ciazhar.ta.tugasakhir.model.jpa.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 /**
  * Created by ciazhar on 8/1/17.
  */
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("api/produk")
 public class ProductController {
 
     @Autowired private ProductDao productDao;
 
-    @RequestMapping("/product/list")
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
     public Page<Product> daftarProduct (Pageable pageable){
         return productDao.findAll(pageable);
+    }
+
+    @RequestMapping(value="/new", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.CREATED)
+    public void postProduct(@RequestBody @Valid Product product){
+        productDao.save(product);
     }
 }
