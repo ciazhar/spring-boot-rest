@@ -46,4 +46,91 @@ public class Product {
     @Column(length = 5)
     private int kdCabang;
 
+    public int getPk() {
+        return pk;
+    }
+
+    public void setPk(int pk) {
+        this.pk = pk;
+    }
+
+    public int getProductCode() {
+        return productCode;
+    }
+
+    public void setProductCode(int productCode) {
+        this.productCode = productCode;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public String getNoProduct() {
+        return noProduct;
+    }
+
+    public void setNoProduct(String noProduct) {
+        this.noProduct = noProduct;
+    }
+
+    public double getHargaBeli() {
+        return hargaBeli;
+    }
+
+    public void setHargaBeli(double hargaBeli) {
+        this.hargaBeli = hargaBeli;
+    }
+
+    public double getHargaJual() {
+        return hargaJual;
+    }
+
+    public void setHargaJual(double hargaJual) {
+        this.hargaJual = hargaJual;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public String getNmCabang() {
+        return nmCabang;
+    }
+
+    public void setNmCabang(String nmCabang) {
+        this.nmCabang = nmCabang;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getExpiredDate() {
+        return expiredDate;
+    }
+
+    public void setExpiredDate(String expiredDate) {
+        this.expiredDate = expiredDate;
+    }
+
+    public int getKdCabang() {
+        return kdCabang;
+    }
+
+    public void setKdCabang(int kdCabang) {
+        this.kdCabang = kdCabang;
+    }
 }

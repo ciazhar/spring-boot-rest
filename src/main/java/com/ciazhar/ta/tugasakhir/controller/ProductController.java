@@ -5,7 +5,6 @@ import com.ciazhar.ta.tugasakhir.model.jpa.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -26,7 +25,6 @@ public class ProductController {
     }
 
     @RequestMapping(value="/new", method = RequestMethod.POST)
-    @ResponseStatus(HttpStatus.CREATED)
     public void postProduct(@RequestBody @Valid Product product){
         productDao.save(product);
     }
